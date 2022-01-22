@@ -3,6 +3,7 @@ import React, { ButtonHTMLAttributes, FC } from "react";
 import classes from "./Button.module.css";
 
 const Button: FC<ButtonHTMLAttributes<HTMLButtonElement>> = (props) => {
+  console.log("Button RUNNING");
   return (
     <button
       type={props.type || "button"}
@@ -14,4 +15,4 @@ const Button: FC<ButtonHTMLAttributes<HTMLButtonElement>> = (props) => {
     </button>
   );
 };
-export default Button;
+export default React.memo(Button);
